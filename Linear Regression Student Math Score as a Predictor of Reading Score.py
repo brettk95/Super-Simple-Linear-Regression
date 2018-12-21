@@ -1,12 +1,4 @@
-
-# coding: utf-8
-
-# In[243]:
-
-
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
 from sklearn.model_selection import train_test_split
 
@@ -19,10 +11,6 @@ y = df['reading score'].values
 x_train,x_test,y_train,y_test = train_test_split(x,y,random_state = 42)
 
 trainingdata = np.array(list(zip(x_train,y_train)))
-
-
-# In[244]:
-
 
 m = 0
 b = 0
@@ -55,10 +43,6 @@ for i in range(50):
 
 print('done')
 
-
-# In[245]:
-
-
 results = np.zeros(x_test.shape)
 
 for i in range(250):
@@ -66,11 +50,3 @@ for i in range(250):
     
 error = results - y_test
 error
-
-
-# In[242]:
-
-
-df[df['math score']==0]
-df.columns
-
